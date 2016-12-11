@@ -22,7 +22,7 @@ function loadMapScenario() {
     var map = new Microsoft.Maps.Map(document.getElementById('myMap'), {
         credentials: 'Ahp8HL6okfKsJe2mlgMSaYtvwg-LwgPufSSS4Jk2DuAp2_uTs7dX-X8ylHGGm_bU'
     });
-    map_namager.map = map;
+    map_manager.map = map;
     
     for (var i in map_manager.map_items) {
         var map_item = map_manager.map_items[i];
