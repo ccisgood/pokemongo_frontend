@@ -7,8 +7,8 @@ map_manager.map_items = [
     {
         "pokemon_id" : 12,
         "expire" : 1480822665,
-        "longitude" :42.26,
-        "latitude" : 71.80
+        "longitude" : -73.45,
+        "latitude" : 40.75
     },
     {
         "pokemon_id" : 2,
@@ -26,7 +26,7 @@ function loadMapScenario() {
     
     for (var i in map_manager.map_items) {
         var map_item = map_manager.map_items[i];
-        var pushpin = new Microsoft.Maps.Pushpin(map.getCenter(), 
+        var pushpin = new Microsoft.Maps.Pushpin(new Microsoft.Maps.Location(map_item["latitude"], map_item["longitude"]), 
                                                  { icon: 'https://github.com/ccisgood/pokemongo_frontend/raw/master/pokemon/' + map_item["pokemon_id"] + '.png'});
         map.entities.push(pushpin);
     }
