@@ -27,7 +27,7 @@ function loadMapScenario() {
     for (var i in map_manager.map_items) {
         var map_item = map_manager.map_items[i];
         var pushpin = new Microsoft.Maps.Pushpin(map.getCenter(), 
-                                                 { icon: '/pokemons/' + map_item["pokemon_id"] + '.png'});
+                                                 { icon: 'pokemongo_frontend/pokemon/' + map_item["pokemon_id"] + '.png'});
         map.entities.push(pushpin);
     }
 }
